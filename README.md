@@ -1,1 +1,1 @@
-# double_descent_quantum_kernels
+# Double descent in quantum kernel methods
