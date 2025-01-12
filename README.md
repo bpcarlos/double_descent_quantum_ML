@@ -1,4 +1,4 @@
-# Double descent in quantum kernel methods
+# Double descent in quantum machine learning
 
 This repository contains the data and code in the paper "Double descent in quantum machine learning," found in [arXiv](arXivURL). The code relies on the PennyLane [(GitHub)](https://github.com/PennyLaneAI/pennylane) package. Please ensure that this package is installed before running the code.
 
