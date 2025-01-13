@@ -6,7 +6,7 @@ This repository contains the data and code in the paper "Double descent in quant
 ## Repository structure
 The repository is organized into folders corresponding to the three different experiments described in the manuscript.
 
-### Empirical evidence of double descent in QML (Section V)
+#### Empirical evidence of double descent in QML (Section V)
 The code and data for these experiments are located in the following folders:
 - `Synthetic`
 - `MNIST_Fashion`
@@ -16,7 +16,7 @@ Each folder contains a Python script that can be executed to run experiments on 
 - Set `n_qubits` to values between 2 and 4 for standard runs.
 - For the more computationally demanding 5-qubit experiments, use the dedicated subfolder to each experimental repetition in parallel.
 
-### Ablation experiments (Section VI)
+#### Ablation experiments (Section VI)
 The ablation experiments are found in the `ablation` folder, which contains three subfolders:
 - `cutoff`
 - `leading`
@@ -24,7 +24,7 @@ The ablation experiments are found in the `ablation` folder, which contains thre
 
 Each subfolder includes a Python script to execute the corresponding ablation experiment.
 
-### The case of projected quantum kernels (Section VII)
+#### The case of projected quantum kernels (Section VII)
 The projected quantum kernel experiments are stored in the `projected_kernel` folder. This folder is further divided into three subfolders corresponding to the datasets:
 - `Synthetic`
 - `MNIST_Fashion`
