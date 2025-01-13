@@ -30,7 +30,7 @@ The projected quantum kernel experiments are stored in the `projected_kernel` fo
 - `MNIST_Fashion`
 - `Housing`
 
-Each dataset folder contains a Python script for running the experiments. As with the first set of experiments, you can adjust the number of qubits (n_qubits) at the beginning of each script. Supported values range from 2 to 5.
+Each dataset folder contains a Python script for running the experiments. As with the first set of experiments, you can adjust the number of qubits (`n_qubits`) at the beginning of each script. Supported values range from 2 to 5.
 
 
 ## Running the code
