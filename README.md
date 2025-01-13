@@ -14,7 +14,7 @@ The code and data for these experiments are located in the following folders:
   
 Each folder contains a Python script that can be executed to run experiments on the respective dataset. Key parameters, including the number of qubits (`n_qubits`), are defined at the beginning of each script. To reproduce the experiments, adjust `n_qubits` as follows:
 - Set `n_qubits` to values between 2 and 4 for standard runs.
-- For the more computationally demanding 5-qubit experiments, use the dedicated subfolder to each experimental repetition in parallel.
+- For the more computationally demanding 5-qubit experiments, use the dedicated subfolder to run each experimental repetition in parallel.
 
 #### Ablation experiments (Section VI)
 The ablation experiments are found in the `ablation` folder, which contains three subfolders:
