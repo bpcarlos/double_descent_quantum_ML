@@ -127,23 +127,6 @@ y_star = compute_y_from_x_multidim_linear(x_star)
 x_star = scaler2.fit_transform(x_star)
 
 X_star = get_rho_data_matrix(x_star)
-beta_star = np.linalg.pinv(X_star) @ y_star
-U_star, S_star, Vt_star = np.linalg.svd(X_star)
-min_singular_value = np.min(S_star[S_star > 0.0])
-S_star_mat = np.zeros((U_star.shape[0], Vt_star.shape[0]), dtype=complex)
-for i in range(len(S_star)):
-    S_star_mat[i, i] = S_star[i]
-
-np.allclose(X_star, np.dot(U_star, np.dot(S_star_mat, Vt_star)))
-
-S_star_inv = np.zeros((Vt_star.shape[0], U_star.shape[0]), dtype=complex)
-for i in range(len(S_star)):
-    S_star_inv[i, i] = 1 / S_star[i]
-
-t1 = np.linalg.pinv(X_star, rcond=1e-15)
-S_star_inv_pinv = np.linalg.pinv(S_star_mat, rcond=1e-16)
-np.allclose(X_star, np.dot(X_star, np.dot(t1, X_star)))
-t3 = np.dot(Vt_star.T.conj(), np.dot(S_star_inv_pinv, U_star.T.conj()))
 
 n = n_qubits
 keep = [4, 8, 16, 32, 64]
