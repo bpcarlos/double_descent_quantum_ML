@@ -134,22 +134,10 @@ X_star = get_rho_data_matrix(x_star)
 
 beta_star = np.linalg.pinv(X_star) @ y_star
 
-U_star, S_star, Vt_star = np.linalg.svd(X_star)
-
-min_singular_value = np.min(S_star[S_star > 0.0])
-
-S_star_inv = np.zeros((Vt_star.shape[0], U_star.shape[0]), dtype=complex)
-for i in range(len(S_star)):
-    if S_star[i] != 0:
-        S_star_inv[i, i] = 1 / S_star[i]
-
-t1 = np.linalg.pinv(X_star)
-
-t2 = Vt_star.T.conj() @ S_star_inv @ U_star.T.conj()
 
 #%% loop over different number of train data -------------------------------------------------
 def get_curves(reps):
-    subset_sizes = np.arange(24,104,5)
+    subset_sizes = np.arange(24, 104, 5)
     mse_arr_test = [[] for r in range(reps)]
     mse_arr_train = [[] for r in range(reps)]
 
