@@ -1,3 +1,4 @@
+#inspired by Schaeffer et.al. 2023
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import pennylane as qml
